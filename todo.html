@@ -1,0 +1,132 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #E0FFFF;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: black;
+  font-size: 18px;
+  transition: 0.2s; 
+}
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+    color:aqua;
+}
+ul li:nth-child(odd) {
+  background: #E6E6FA;
+}
+
+ul li:hover {
+  background: #555;
+}
+ul li  {
+  background: #fff0f5;
+  color: black;
+}
+ul li::before {
+  content: '';
+  position: absolute;
+  border-color: #555;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.addBtn {
+  padding: 8px;
+  width: 23%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+.button {
+  float: right;
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin:  2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+.button4:hover {background-color: #e7e7e7;}
+</style>
+<div id="myDIV" class="header">
+    <h2>My To Do List</h2>
+ <input type="text" id="inputbox" placeholder="Title...">
+ <button onclick="add()" class="addBtn">Add Task</button>
+ </div>
+ <ul  id="result"></ul>
+ <script>
+     
+     var div = document.getElementById("result")
+     function add()
+     {
+        var container = document.createElement("li")
+        container.innerHTML = inputbox.value +  "<button class='button button4' onclick='deleteitem(event)'>clear</button>"
+        div.append(container)
+        
+     }
+     function deleteitem(event)
+     {
+       event.target.parentElement.remove()
+     }
+     
+ </script>
