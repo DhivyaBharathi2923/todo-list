@@ -27,7 +27,7 @@ Installation
 
     bash
 
-git clone https://github.com/your-username/todo-list.git
+git clone https://github.com/Dhivyabharathi2923/todo-list.git
 
 Open the project folder:
 
@@ -42,7 +42,6 @@ Usage
     Open index.html in your web browser.
     Add tasks using the input field.
     Edit tasks by clicking on them.
-    Mark tasks as completed by checking the checkbox.
     Delete tasks by clicking the delete button.
 
 Contributing
@@ -50,28 +49,3 @@ Contributing
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please create an issue or fork the repository and submit a pull request.
 Development Setup
 
-    Fork the repository.
-
-    Clone your fork:
-
-    bash
-
-git clone https://github.com/your-username/todo-list.git
-
-Create a new branch:
-
-bash
-
-git checkout -b feature-name
-
-Make your changes and commit them:
-
-bash
-
-git commit -m "Add your feature"
-
-Push to the branch:
-
-bash
-
-git push origin feature-name
